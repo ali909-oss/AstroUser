@@ -1,0 +1,115 @@
+import React from 'react';
+import { StyleSheet, View, Text, ScrollView, TouchableOpacity,Image, TextInput } from 'react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import AntDesign from 'react-native-vector-icons/dist/AntDesign';
+
+
+
+
+const Menue = () => {
+    return (
+        <View style={styles.container}>
+            <View style={{ backgroundColor: '#e1eaed' ,height: hp('16%'),}}>
+                <Text style={{ fontSize: 20, fontWeight: '500', marginTop: hp('1'), marginLeft: wp('22'), color: 'black' }}>Select a Store to Shop</Text>
+                <TextInput style={styles.textin}
+                    placeholder="Search US Stores"
+                    placeholderTextColor="#666666"
+                    
+                    
+                />
+    <AntDesign style={{marginTop:hp('-5.5'),marginLeft:wp('6')}} name={"search1"} size={25} color="black"/>
+     
+     <View style={{backgroundColor: '#e1eaed',marginTop:hp('-4.5'),marginLeft:wp('85'),borderRadius:10,borderWidth:2,borderColor:'#20447d',width:50,height:40}}/>
+     <Image style={{height:20,width:40,marginTop:hp('-4.5'),marginLeft:wp('86')}} source={require('../assets/images/removebg.png')} />
+
+                
+            </View>
+            
+            <Text style={{ fontSize: 30, fontWeight: '500', marginTop: hp('1'), marginLeft: wp('35'), color: 'black' }}>All Stores</Text>
+            <View style = {styles.lineStyle} />
+
+            <View style={{flexDirection:'row',justifyContent:'space-around'}} >
+            <TouchableOpacity>
+            <Image style={{height:100,width:200}} source={require('../assets/images/download.jpg')} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+            <Image style={{height:100,width:180}} source={require('../assets/images/download1.png')} />
+             </TouchableOpacity>
+             </View>
+             <View style = {styles.lineStyle} />
+
+             <View style={{flexDirection:'row',justifyContent:'space-around'}} >
+            <TouchableOpacity>
+            <Image style={{height:100,width:200}} source={require('../assets/images/download2.png')} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+            <Image style={{height:100,width:180}} source={require('../assets/images/download3.png')} />
+            </TouchableOpacity>
+             </View>
+             <View style = {styles.lineStyle} />
+
+             <View style={{flexDirection:'row',justifyContent:'space-around'}} >
+            <TouchableOpacity>
+            <Image style={{height:100,width:200}} source={require('../assets/images/download4.png')} />
+
+            </TouchableOpacity>
+            <TouchableOpacity>
+            <Image style={{height:100,width:180}} source={require('../assets/images/download5.png')} />
+
+            </TouchableOpacity>
+             </View>
+             <View style = {styles.lineStyle} />
+
+             <View style={{flexDirection:'row',justifyContent:'space-around'}} >
+             <TouchableOpacity>
+             <Image style={{height:100,width:200,marginTop:hp('2')}} source={require('../assets/images/download6.png')} />
+
+             </TouchableOpacity>
+            <TouchableOpacity>
+            <Image style={{height:100,width:180,marginTop:hp('2')}} source={require('../assets/images/download8.png')} />
+
+            </TouchableOpacity>
+             </View>
+             <View style = {styles.lineStyle} />
+
+            
+             
+
+        
+
+        </View>
+    )
+}
+
+
+
+export default Menue;
+
+
+
+const styles = StyleSheet.create({
+    container: {
+
+        backgroundColor: 'white',
+        height: hp('100%'),
+        width: wp('100%')
+
+    },
+    textin: {
+        marginLeft: wp('2'), 
+        backgroundColor: '#FFF',
+         fontSize: 20, 
+         marginTop: hp('3'), 
+         justifyContent: 'center', 
+         alignItems: 'center',
+         width: wp('80%'),
+         borderRadius:10,
+         textAlign:'center',
+         height:50
+    },
+    lineStyle:{
+        borderWidth: 0.2,
+        borderColor:'grey',
+        marginTop:hp('2')
+    },
+});
